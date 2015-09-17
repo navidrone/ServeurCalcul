@@ -11,7 +11,7 @@ import java.rmi.RemoteException;
  *
  */
 public interface DroneInt extends Remote {
-	
+		
 	public Integer getId()  throws RemoteException;
 
 	public void setId(Integer id)  throws RemoteException;

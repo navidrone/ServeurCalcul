@@ -43,6 +43,10 @@ public interface MissionInt extends Remote{
 
 	public void setReleve(List<? extends ReleveInt> releve) throws RemoteException;
 	
+	public void addDrone(String droneName) throws RemoteException;
+	
+	public void deleteDrone(String droneName) throws RemoteException;
+	
 	public List<? extends DroneInt> getFlotte() throws RemoteException;
 
 	public void setFlotte(List<? extends DroneInt> flotte) throws RemoteException;
