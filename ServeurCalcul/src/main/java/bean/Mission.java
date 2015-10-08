@@ -53,8 +53,7 @@ public class Mission extends UnicastRemoteObject implements Serializable,Mission
 		if(missionInt.getReleve() != null){
 			
 			for(ReleveInt releveInt:missionInt.getReleve()){
-				Releve r = new Releve();
-				BeanUtils.copyProperties(releveInt, r);
+				Releve r = new Releve(releveInt.getCoordGps());				
 				releveList.add(r);
 			}
 			

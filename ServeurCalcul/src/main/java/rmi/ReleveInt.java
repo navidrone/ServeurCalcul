@@ -26,5 +26,15 @@ public interface ReleveInt extends Remote {
 
 	public void setCoordGps(CoordGpsInt coordGps)  throws RemoteException;
 	
+	public Integer getId() throws RemoteException;
+	
+	public void setId(Integer id)  throws RemoteException;
 
+	public Double getLattitude() throws RemoteException;
+	
+	public void setLattitude(Double lattitude)  throws RemoteException;
+	
+	public Double getLongitude()   throws RemoteException;
+	
+	public void setLongitude(Double longitude) throws RemoteException;
 }

@@ -53,6 +53,34 @@ public class Releve extends UnicastRemoteObject implements ReleveInt, Serializab
 	public void setCoordGps(CoordGpsInt coordGps) {
 		this.coordGps = (CoordGps)coordGps;
 	}
+
+
+	public Integer getId() throws RemoteException {
+		return coordGps.getId();
+	}
+
+	public void setId(Integer id) throws RemoteException {
+		coordGps.setId(id);	
+	}
+
+	public Double getLattitude() throws RemoteException {
+		return coordGps.getLattitude();
+	}
+
+	public void setLattitude(Double lattitude) throws RemoteException {
+		coordGps.setLattitude(lattitude);
+		
+	}
+
+	public Double getLongitude() throws RemoteException {
+		return coordGps.getLongitude();
+	}
+
+	public void setLongitude(Double longitude) throws RemoteException {
+		coordGps.setLongitude(longitude);
+		
+	}
+	
 	
 	
 }
