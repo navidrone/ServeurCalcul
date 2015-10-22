@@ -156,7 +156,7 @@ public class GpsCalcul {
 		
 		wayPoints.add(point);
 		
-		//System.out.println("distance Max = " +  DistMax + " distance= " +EcartCercle);
+		System.out.println("distance Max = " +  DistMax + " distance= " +EcartCercle);
 		
 		while(dist < DistMax ){
 			
@@ -164,7 +164,7 @@ public class GpsCalcul {
 			
 			while (angle < 360){
 				
-				//System.out.println("distance = " +  dist + " angle= " +angle);
+				System.out.println("distance = " +  dist + " angle= " +angle);
 				
 				point = (CoordGps)getpointBrng(angle, dist, debut);
 				

@@ -45,7 +45,10 @@ public class Mission extends UnicastRemoteObject implements Serializable,Mission
 		this.densite = missionInt.getDensite() ;
 		this.portee = missionInt.getPortee() ;
 		this.coord_dep = new CoordGps(missionInt.getCoord_dep());
-		this.coord_ar = new CoordGps(missionInt.getCoord_ar());
+
+		if("bathymetrie".equalsIgnoreCase(missionInt.getType())){
+			this.coord_ar = new CoordGps(missionInt.getCoord_ar());
+		}
 		
 		ArrayList<Releve> releveList = new ArrayList<Releve>();
 		ArrayList<Drone>  droneList  = new ArrayList<Drone>();

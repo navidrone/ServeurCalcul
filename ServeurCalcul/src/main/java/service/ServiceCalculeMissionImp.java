@@ -88,7 +88,7 @@ public class ServiceCalculeMissionImp extends UnicastRemoteObject implements Ser
 			throw new RemoteException("Relevés déjà générés pour cette mission");
 		}
 		
-		boolean bathymetrie = "bathymetrie".equals(mission.getType());
+		boolean bathymetrie = "bathymetrie".equalsIgnoreCase(mission.getType());
 		
 		if(bathymetrie){
 			
@@ -120,6 +120,7 @@ public class ServiceCalculeMissionImp extends UnicastRemoteObject implements Ser
 	 */
 	private Mission missionBathymetrie(Mission mission) throws RemoteException{
 		
+		System.out.println("Calcul du mission Bathymétrie");
 		
 		CoordGpsInt debut = mission.getCoord_dep();
 		CoordGpsInt fin = mission.getCoord_ar();		
@@ -147,6 +148,8 @@ public class ServiceCalculeMissionImp extends UnicastRemoteObject implements Ser
 	 */
 	private Mission missionToc(Mission mission) throws RemoteException{
 
+		System.out.println("Calcul du mission Toc");
+		
 		CoordGpsInt debut = mission.getCoord_dep();
 		double DistMax = mission.getPortee();
 		double EcartCercle = mission.getDensite();
