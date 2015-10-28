@@ -113,11 +113,12 @@ public class GpsCalcul {
 		
 		double dist = Distance(debut,fin) * 1000;
 		
-
+	
+		
 		double brng = clacBearing(debut,fin);
 		
 		
-		CoordGps point = new CoordGps(debut.getLattitude(),debut.getLattitude());
+		CoordGps point = new CoordGps(debut.getLattitude(),debut.getLongitude());
 		
 		double distBrng = distEntrepoint/1000;
 		
@@ -133,6 +134,8 @@ public class GpsCalcul {
 				point = (CoordGps)getpointBrng(brng, distBrng, point);
 				
 				Ndist = Distance(debut,point) * 1000;
+				
+				System.out.println("distance = " +  Ndist );
 				
 				wayPoints.add(point);
 				
